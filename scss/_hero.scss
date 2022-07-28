@@ -1,0 +1,269 @@
+// 
+// .hero.scss
+// 
+@mixin bg-center {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Hero-one
+.hero-one{
+    &.main-bg{
+        background-color: $hero-main-bg;
+    }
+    .hero-title{
+        font-size: 54px;
+        line-height: 70px;
+        font-weight: 700;
+        color: $dark;
+    }
+}
+
+//   About
+
+.personal-detail-title {
+    width: 168px;
+    float: left;
+    font-weight: 500;
+    padding-right: 10px;
+    position: relative;
+    display: block;
+    font-size: 16px;    
+    &:after {
+        content: ":";
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.personal-detail-info {
+    padding-left: 190px;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: $gray-600;
+}
+
+
+.social{
+    i{
+        width: 36px;
+        height: 36px;
+        border: 1px solid $gray-500;
+        color: $gray-500;
+        border-radius: 50%;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+        font-size: 22px;       
+    }
+    a{      
+        &:hover {         
+            .github{
+                border-color: $dark;
+                color: $dark;
+                transition: all 0.5s;
+            }
+            .twitter{
+                border-color: $primary;
+                color: $primary;
+                transition: all 0.5s;
+            }
+            .google{
+                border-color: $danger;
+                color: $danger;
+                transition: all 0.5s;
+            }
+            .linkedin{
+                border-color: $info;
+                color: $info;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+// Resume
+
+.accordion {
+    .accordion-item {
+        border-bottom: 1px dashed $border;
+        background-color: transparent;
+        .accordion-header {
+            .accordion-button {
+                padding: 1.5rem 1.25rem;
+                font-size: 17px;
+                background-color: $white;
+                color: $body-color; 
+                &:after {
+                 background-image: none;
+                 margin-left: 0;
+                 width: 0;
+                }
+                &:before {
+                    content: "─";
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    margin-right: 10px;
+                    color: $primary;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+                &.collapsed {
+                    &:before {
+                        content: "✛";
+                        margin-right: 10px;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+
+                    }
+                }
+                &:not(.collapsed){
+                    box-shadow: none;
+                    border-bottom: 1px dashed $border;
+                    background-color: $card-bg;
+                    color: $dark;                   
+                }
+            }            
+        }
+        .accordion-collapse {
+            .accordion-body {
+                position: relative;
+                padding: 24px 32px; 
+                color: $dark;   
+                background-color: $light;            
+            }
+        }
+    }
+}
+
+.vector-dark{
+    display: $d-block;
+}
+.vector-light{
+    display: $d-none;
+}
+// Testimonial
+
+.client-carousel{
+    .carousel-control-prev,
+    .carousel-control-next{
+        width: 40px;
+        height: 40px;
+        background-color: lighten($primary, 52%);
+        border-radius:50%;
+        opacity: 1;
+        &:hover {
+            opacity: .9;
+        }
+    }
+    .carousel-control-prev {
+        right: 48px;
+        top:50%;
+        .carousel-control-prev-icon {
+        background-image: none;
+        }
+        &:after {        
+            content: "\f060";
+            font-family: "Line Awesome Free" !important;
+            font-size: .875rem;
+            color: $primary;
+            line-height: 1.875rem;
+            margin-right: 12px;
+            font-weight: 900;
+        }
+    }
+    .carousel-control-next {
+        left: auto;
+        right: 0;
+        top:50%;
+        .carousel-control-next-icon {
+            background-image: none;
+        }
+        &:after {        
+            content: "\f061";
+            font-family: "Line Awesome Free" !important;
+            font-size: .875rem;
+            color: $primary;
+            line-height: 1.875rem;
+            margin-right: 12px;
+            font-weight: 900;
+        }
+    }
+}
+// CTA
+
+.cta-pettern{
+    background-image: url(../images/personal/testi-pet.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cta-search {
+    input {
+        padding: 15px 136px 15px 20px;
+        width: 100%;
+        font-size: 16px;
+        border: 2px solid darken($light, 2%);
+        outline: none !important;
+        border-radius: 8px;
+        background-color: $white;
+        color: $gray-700;
+    }
+    button {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        outline: none !important;
+        border-radius: 8px;
+        font-size: 16px;
+        padding: 13px 30px;
+        &:active,
+        &:focus,
+        &:hover{
+            transition: none;
+            transform:none;
+        }
+    }   
+}
+
+// hero-video
+
+.bg-overlay {
+    background: linear-gradient(120deg, $card-bg 46%, rgba(145,213,237,0.6138830532212884) 80%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.hero_video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.hero-video{
+    overflow: hidden;    
+    background-size: cover;
+}
+.hero_video,
+.hero iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -50%);
+  width: 100vw;
+  height: 56.25vw; /* 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16/9*100 = 177.77 */
+  z-index: -1;
+}

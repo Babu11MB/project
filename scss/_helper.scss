@@ -1,0 +1,297 @@
+// 
+// helper.scss
+// 
+
+.font-secondary{
+    font-family: $font-secondary !important;
+}
+.card-bg{
+    background-color: $card-bg;
+}
+// color
+@each $color,
+$value in $theme-colors {
+    .text-#{$color} {
+        color: ($value) !important;
+    }
+    .bg-#{$color} {
+        background-color: ($value) !important;
+    }
+}
+// font-size
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-19 {
+    font-size: 19px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-21 {
+    font-size: 21px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-23 {
+    font-size: 23px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+.fs-28 {
+    font-size: 28px;
+}
+.fs-30 {
+    font-size: 30px;
+}
+.fs-32 {
+    font-size: 32px;
+}
+.fs-34 {
+    font-size: 34px;
+}
+.fs-36 {
+    font-size: 36px;
+}
+.fs-40 {
+    font-size: 40px;
+}
+.fs-50 {
+    font-size: 50px;
+}
+
+// font-weight
+.fw-light{
+    font-weight: 300;
+}
+.fw-light-alt{
+    font-weight: 400;
+}
+.fw-medium {
+    font-weight: 500;
+}
+.fw-semibold {
+    font-weight: 600;
+}
+
+// icon size
+.icon {    
+    position: relative;
+    top:-2px;
+}
+.icon-xxl {
+    height: 58px;
+    width: 58px;
+}
+
+.icon-xl {
+    height: 48px;
+    width: 48px;
+}
+
+.icon-lg {
+    height: 34px;
+    width: 34px;
+}
+
+.icon-sm {
+    height: 24px;
+    width: 24px;
+}
+
+.icon-xs {
+    height: 18px;
+    width: 18px;
+}
+
+.icon-xxs {
+    height: 15px;
+    width: 15px;
+}
+
+// icon-weight
+.sw-1_5 {
+    stroke-width: 1.5px;
+}
+.sw-1 {
+    stroke-width: 1px;
+} 
+.text-gray-700 {
+    color: $gray-700 !important;
+}
+// border
+.border {
+    border: 1px solid $gray-100;
+}
+.border-2 {
+    border: 2px solid $gray-100;
+}
+.border-3 {
+    border: 3px solid $gray-100;
+}
+.border-4 {
+    border: 4px solid $gray-100;
+}
+.border-end {
+    border-right: 1px solid $gray-100;
+}
+
+// shadow
+.shadow {
+    box-shadow: 0px 4px 20px rgba($shadow-color, 0.2) !important;
+}
+
+.bg-gradient-light-white {
+    background-image: linear-gradient(
+180deg,$light 0,$white);
+}
+
+.section {
+    padding: 100px 0px 100px;
+    position: relative;
+}
+
+
+mark {
+    color: inherit;
+    padding: 0;
+    background: 0 0;
+    background-image: linear-gradient(
+120deg, rgba($warning,0.8) 0, rgba($warning,0.8) 100%);
+    background-repeat: no-repeat;
+    background-size: 0 0.3em;
+    background-position: 0 80%;
+    position: relative;
+    background-size: 100% 0.25em;
+    animation-delay: 1s;
+}
+
+// Thumb sizes+
+.thumb-xxs {
+    height: 24px !important;
+    width: 24px !important;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .thumb-xs {
+    height: 32px !important;
+    width: 32px !important;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .thumb-sm {
+    height: 36px !important;
+    width: 36px !important;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .thumb-md {
+    height: 42px;
+    width: 42px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .thumb-lg {
+    height: 48px;
+    width: 48px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .thumb-xl {
+    height: 60px;
+    width: 60px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .thumb-xxl {
+    height: 72px;
+    width: 72px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  
+  hr.hr-dashed {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px dashed $border;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    background-color: rgba($white, 0.07);
+    opacity: 1;
+    &.hr-light{
+        border-top: 1px dashed rgba($border, 0.5);
+    }
+}
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.py-200{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+// Nagative margin
+.ms-n1{
+    margin-left: -5px;
+}
+.ms-n2{
+    margin-left: -10px;
+}
+
+// Icon-stroke width
+.sw-1{
+    stroke-width: 1px;
+}
+.z-i-0{
+    z-index: 0;
+}
+.z-i-1{
+    z-index: 1;
+}
+.z-i-2{
+    z-index: 2;
+}
+.z-i-3{
+    z-index: 3;
+}
+.z-i-4{
+    z-index: 4;
+}
+.z-i-5{
+    z-index: 5;
+}
